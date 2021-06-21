@@ -438,3 +438,15 @@ let quotes = [
   },
   { quote: "If you can dream it, you can achieve it.", author: "Zig Ziglar" },
 ];
+
+let randomQuote = () => {
+  let randQuoteIdx = Math.floor(Math.random() * quotes.length);
+  let getRandQuote = quotes[randQuoteIdx];
+  return formatQuote(randQuoteIdx, getRandQuote.quote, getRandQuote.author);
+};
+
+let formatQuote = (idx, quote, author) => {
+  return `${idx}. ${quote} ~ ${author}`;
+};
+
+console.log(randomQuote());
